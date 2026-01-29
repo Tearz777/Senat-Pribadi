@@ -37,6 +37,23 @@
     }
   </style>
 </head>
+
+<script>
+  function kirimKeSenat() {
+    const teks = document.getElementById("kasus").value;
+
+    if (teks.trim() === "") {
+      alert("Tulis dulu kasusnya.");
+      return;
+    }
+
+    const kursi = document.querySelectorAll(".kursi p");
+    kursi.forEach(p => {
+      p.innerText = teks;
+    });
+  }
+</script>
+  
 <body>
 
   <h1>🏛️ Senat Pribadi</h1>
