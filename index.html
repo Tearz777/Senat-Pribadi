@@ -40,17 +40,27 @@
 
 <script>
   function kirimKeSenat() {
-    const teks = document.getElementById("kasus").value;
+    const kasus = document.getElementById("kasus").value.trim();
 
-    if (teks.trim() === "") {
+    if (!kasus) {
       alert("Tulis dulu kasusnya.");
       return;
     }
 
-    const kursi = document.querySelectorAll(".kursi p");
-    kursi.forEach(p => {
-      p.innerText = teks;
-    });
+    document.getElementById("logika").innerText =
+      "Fakta utama: " + kasus + ". Apa sebab langsung dan dampak nyatanya?";
+
+    document.getElementById("etika").innerText =
+      "Apakah keputusan terkait '" + kasus + "' adil dan tidak merugikan pihak lain?";
+
+    document.getElementById("skeptis").innerText =
+      "Apakah '" + kasus + "' ini masalah sebenarnya, atau ada hal lain di baliknya?";
+
+    document.getElementById("empati").innerText =
+      "Jika aku berada di posisi orang lain terkait '" + kasus + "', apa yang aku rasakan?";
+
+    document.getElementById("pragmatis").innerText =
+      "Langkah paling masuk akal sekarang terkait '" + kasus + "' apa?";
   }
 </script>
   
