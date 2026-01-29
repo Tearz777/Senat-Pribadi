@@ -1,11 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <title>Senat Pribadi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 16px;
+    }
+    h1 {
+      text-align: center;
+    }
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      margin-bottom: 16px;
+      padding: 10px;
+      font-size: 14px;
+    }
+    .senat {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .kursi {
+      background: white;
+      padding: 12px;
+      border-radius: 6px;
+      border-left: 4px solid #333;
+    }
+    .kursi h3 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
+
   <h1>🏛️ Senat Pribadi</h1>
-  <p>Aplikasi bantu berpikir & mengambil keputusan.</p>
+
+  <h2>Kasus / Masalah</h2>
+  <textarea placeholder="Tulis masalah atau keputusan yang ingin kamu pikirkan..."></textarea>
+
+  <h2>Pendapat Senat</h2>
+  <div class="senat">
+
+    <div class="kursi">
+      <h3>🧠 Logika</h3>
+      <p>Apa fakta objektifnya? Apa sebab-akibatnya?</p>
+    </div>
+
+    <div class="kursi">
+      <h3>⚖️ Etika</h3>
+      <p>Apakah ini adil? Siapa yang terdampak?</p>
+    </div>
+
+    <div class="kursi">
+      <h3>🔍 Skeptis</h3>
+      <p>Apa risiko tersembunyi? Apa yang bisa salah?</p>
+    </div>
+
+    <div class="kursi">
+      <h3>❤️ Empati</h3>
+      <p>Bagaimana perasaan orang lain dalam situasi ini?</p>
+    </div>
+
+    <div class="kursi">
+      <h3>🛠️ Pragmatis</h3>
+      <p>Apa langkah paling realistis untuk sekarang?</p>
+    </div>
+
+  </div>
+
 </body>
 </html>
