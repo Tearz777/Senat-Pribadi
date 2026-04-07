@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Senat Pribadi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 16px;
+    }
+    h1 {
+      text-align: center;
+    }
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      margin-bottom: 16px;
+      padding: 10px;
+      font-size: 14px;
+    }
+    .senat {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .kursi {
+      background: white;
+      padding: 12px;
+      border-radius: 6px;
+      border-left: 4px solid #333;
+    }
+    .kursi h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+
+<script>
+  function kirimKeSenat() {
+    const kasus = document.getElementById("kasus").value.trim();
+
+    if (!kasus) {
+      alert("Tulis dulu kasusnya.");
+      return;
+    }
+
+    document.getElementById("logika").innerText =
+      "Secara logis, situasi '" + kasus + "' perlu diurai ke sebab yang jelas dan dampak paling langsung.";
+
+    document.getElementById("etika").innerText =
+      "Dari sisi etika, keputusan terkait '" + kasus + "' sebaiknya tidak merugikan orang lain dan tetap adil.";
+
+    document.getElementById("skeptis").innerText =
+      "Secara skeptis, ada kemungkinan '" + kasus + "' bukan satu-satunya masalah yang sedang terjadi.";
+
+    document.getElementById("empati").innerText =
+      "Dari sisi empati, penting memahami perasaan yang muncul akibat '" + kasus + "'—baik pada diri sendiri maupun orang lain.";
+
+    document.getElementById("pragmatis").innerText =
+      "Pendekatan paling praktis untuk '" + kasus + "' adalah mengambil langkah kecil yang bisa dilakukan sekarang.";
+  }
+</script>
+  
+<body>
+
+  <h1>🏛️ Senat Pribadi</h1>
+
+  <h2>Kasus / Masalah</h2>
+  <textarea id="kasus" placeholder="Tulis masalah atau keputusan yang ingin kamu pikirkan...">
+    
+  </textarea>
+
+<button onclick="kirimKeSenat()">Masukkan ke Senat</button>
+
+  <h2>Pendapat Senat</h2>
+  <div class="senat">
+
+    <div class="kursi">
+  <h3>🧠 Logika</h3>
+  <p id="logika"></p>
+</div>
+
+<div class="kursi">
+  <h3>⚖️ Etika</h3>
+  <p id="etika"></p>
+</div>
+
+<div class="kursi">
+  <h3>🔍 Skeptis</h3>
+  <p id="skeptis"></p>
+</div>
+
+<div class="kursi">
+  <h3>❤️ Empati</h3>
+  <p id="empati"></p>
+</div>
+
+<div class="kursi">
+  <h3>🛠️ Pragmatis</h3>
+  <p id="pragmatis"></p>
+</div>
+
+</body>
+</html>
